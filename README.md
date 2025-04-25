@@ -1,41 +1,44 @@
-# 📱 TikTok Usage Habits and Their Impact on Academic Periods: A Final Exam Week Analysis
 
-## 📌 Motivation
-University final exams are a stressful and intense period for students. During this time, distractions and coping mechanisms such as social media can play a significant role in study habits and overall well-being.  
+# TikTok Usage Habits and Personal Transformation
 
-This project aims to analyze **how my TikTok usage changes during the final exam period** and whether it has an impact on my academic performance, focus time, and stress levels.  
-❓ *Does TikTok serve as a distraction, or does it help relieve academic stress?*
+## 📌 Project Motivation
+Originally, this project aimed to analyze TikTok usage specifically during final exam periods.
+However, throughout the process, a deeper personal realization emerged.
+Over time, I became more critical of social media platforms and observed that they often push users toward similar behaviors — watching the same videos, visiting the same places, wearing similar clothes, and listening to the same music.
+This homogenization led me to consciously reduce my social media engagement.
+Through this project, I validated that my TikTok activity declined significantly over the years, reflecting a personal decision to step away from social conformity.
 
----
+## 📂 Data Source
+- TikTok Personal Data Archive (downloaded via TikTok data request portal)
+- Direct Messages section was analyzed to measure TikTok link sharing frequency over time.
 
-## 📊 Data Source and Time Frame
-- **📂 TikTok Personal Data Archive**: Includes watch time, content categories, and interaction history.
-- **📅 Time Frame**: The final exam period *(e.g., the last 1-2 weeks before finals)*.
-- **🔍 Additional Data Sources (Optional)**:  
-  - University **exam schedule and deadlines**.
-  - **Study time logs** *(if available)*.
-  - **Phone Screen Time data** *(to compare TikTok usage with other apps)*.
+## 🔍 Data Analysis
+- Extracted timestamps from direct message history.
+- Aggregated the number of TikTok links shared each month between 2021 and 2025.
+- Visualized monthly usage trends using a line chart.
 
----
+## 📈 Key Findings
+- A significant increase in TikTok activity was observed around September-November 2022.
+- A sharp decline in TikTok sharing activity started in 2023 and continued throughout 2024 and 2025.
+- This trend aligns with a personal shift away from heavy social media usage.
 
-## 🔬 Analysis Methods
-### 🔍 **Exploratory Data Analysis (EDA)**
-- How does my **TikTok usage change during the final exam period**?  
-- What **time of the day** do I use TikTok the most?  
+## 🚀 Tools & Technologies
+- Python
+- Libraries: pandas, matplotlib, json
 
-### 📈 **Correlation Analysis**
-- Does **increased TikTok usage** correlate with **decreased study hours**?  
-- Is there a **relationship between TikTok usage and academic stress levels**?  
+## 📝 Limitations & Future Work
+- Only Direct Message shared links were analyzed; public interactions (likes, posts) were not included.
+- Future work could involve analyzing broader activity logs and screen time data for a more complete behavioral study.
 
-### 📊 **Data Visualization**
-- **📅 Daily usage trends**: Graphs showing the changes in TikTok watch time.
-- **📆 Comparison of TikTok usage vs. exam days**.
+## 🛠 Setup Instructions
+1. Clone this repository.
+2. Install the required packages using:
+    ```
+    pip install -r requirements.txt
+    ```
+3. Open the `TikTok_Usage_Analysis.ipynb` notebook to reproduce the analysis.
 
----
-
-## 🎯 Expected Outcomes
-- Understanding the **effects of social media on students** during high-stress academic periods.  
-- Identifying whether **TikTok usage helps in coping with stress** or acts as a major distraction.  
-- Observing **personal usage patterns** to develop better study habits for future exam periods.  
-
----
+## 📅 Timeline
+- Data collection and initial EDA: ✅
+- Final analysis and visualization: ✅
+- Interpretation and reflection writing: ✅
