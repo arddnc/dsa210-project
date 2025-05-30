@@ -1,44 +1,70 @@
+# 📊 TikTok Usage Behavior Analysis using Machine Learning
 
-# TikTok Usage Habits and Personal Transformation
+This project explores how personal TikTok sharing behavior evolves over time, using real data collected from TikTok's activity archive. The motivation lies in examining whether social media engagement declines naturally, particularly during exam periods or due to personal disengagement from algorithm-driven content.
 
-## 📌 Project Motivation
-Originally, this project aimed to analyze TikTok usage specifically during final exam periods.
-However, throughout the process, a deeper personal realization emerged.
-Over time, I became more critical of social media platforms and observed that they often push users toward similar behaviors — watching the same videos, visiting the same places, wearing similar clothes, and listening to the same music.
-This homogenization led me to consciously reduce my social media engagement.
-Through this project, I validated that my TikTok activity declined significantly over the years, reflecting a personal decision to step away from social conformity.
+---
 
-## 📂 Data Source
-- TikTok Personal Data Archive (downloaded via TikTok data request portal)
-- Direct Messages section was analyzed to measure TikTok link sharing frequency over time.
+## 🎯 Motivation
 
-## 🔍 Data Analysis
-- Extracted timestamps from direct message history.
-- Aggregated the number of TikTok links shared each month between 2021 and 2025.
-- Visualized monthly usage trends using a line chart.
+Over time, I noticed that people around me — including myself — began to consume increasingly similar content, visit the same places, and follow the same trends on social media. This raised questions about how my own habits were changing and whether I was subconsciously stepping back from platforms like TikTok.
 
-## 📈 Key Findings
-- A significant increase in TikTok activity was observed around September-November 2022.
-- A sharp decline in TikTok sharing activity started in 2023 and continued throughout 2024 and 2025.
-- This trend aligns with a personal shift away from heavy social media usage.
+This project aims to answer that question using data science tools.
 
-## 🚀 Tools & Technologies
-- Python
-- Libraries: pandas, matplotlib, json
+---
 
-## 📝 Limitations & Future Work
-- Only Direct Message shared links were analyzed; public interactions (likes, posts) were not included.
-- Future work could involve analyzing broader activity logs and screen time data for a more complete behavioral study.
+## 🧾 Dataset
 
-## 🛠 Setup Instructions
-1. Clone this repository.
-2. Install the required packages using:
-    ```
-    pip install -r requirements.txt
-    ```
-3. Open the `TikTok_Usage_Analysis.ipynb` notebook to reproduce the analysis.
+- Personal TikTok data collected via TikTok's [Download Your Data](https://www.tiktok.com/legal/report/data-access/en) feature.
+- The dataset includes **monthly counts of shared video links** between 2022 and 2024.
+- Additional contextual features were manually added (e.g., final exam months, summer).
 
-## 📅 Timeline
-- Data collection and initial EDA: ✅
-- Final analysis and visualization: ✅
-- Interpretation and reflection writing: ✅
+---
+
+## ⚙️ Methodology
+
+- **Exploratory Analysis**: Line chart showing month-to-month changes in link sharing.
+- **Feature Engineering**:
+  - `Previous Month Link Count`
+  - `Is_Summer` (June–August)
+  - `Is_Final` (June 2024)
+- **Modeling**:
+  - Trained a **Random Forest Classifier** to predict whether monthly usage increased or decreased
+  - Compared with logistic regression, Random Forest performed significantly better
+
+---
+
+## 📈 Results
+
+- **Line Chart**: Clear downward trend with seasonal spikes (e.g. January, June).
+- **Random Forest Performance**:
+  - Successfully predicted both increases and decreases
+  - Highlighted `Previous Month Link Count` as the most important predictor
+- **Confusion Matrix & Metrics** included in the notebook
+
+---
+
+## 🔍 Interpretation
+
+The analysis reveals that social media behavior — particularly content sharing — is influenced by both **personal cycles** and **contextual signals** like exams or holidays. The most predictive feature was recent behavior, confirming that short-term digital habits strongly affect future engagement.
+
+---
+
+## 📁 Files Included
+
+- `TikTok_ML_Project_Professional_Final.ipynb`: Full code and analysis
+- `results/line_chart.png`: Time-based usage visualization
+- `results/feature_importance.png`: Model interpretation
+- `data/tiktok_data_cleaned.csv`: Cleaned and anonymized dataset (optional)
+
+---
+
+## 🧠 Conclusion
+
+This project combines personal reflection and technical analysis to model behavioral change on social media. Using simple yet effective machine learning models, we can quantify how and when our engagement shifts — revealing insights that go beyond what the algorithm shows us.
+
+---
+
+## 👤 Author
+
+Arda Dinç – DSA210 (2024–2025 Spring)  
+Sabancı University
